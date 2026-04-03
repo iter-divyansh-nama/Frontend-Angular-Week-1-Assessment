@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visionary</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="logo">Visionary</div>
+      <button class="hamburger" id="menuBtn" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Team</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <section class="hero">
+      <h1>Building the future together</h1>
+      <p>Our mission is to empower teams with the best tools and talent.</p>
+    </section>
+
+    <section class="team-section">
+      <h2>Meet Our Team</h2>
+      <div class="team-grid">
+        <div class="card">
+          <img
+            class="avatar"
+            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=160&h=160&fit=crop&crop=face&auto=format"
+            alt="Alex Johnson"
+          />
+          <div class="card-name">Alex Johnson</div>
+          <div class="card-role">Chief Executive<br />Officer</div>
+        </div>
+
+        <div class="card">
+          <img
+            class="avatar"
+            src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=160&h=160&fit=crop&crop=face&auto=format"
+            alt="Sarah Williams"
+          />
+          <div class="card-name">Sarah Williams</div>
+          <div class="card-role">Technical<br />Director</div>
+        </div>
+
+        <div class="card">
+          <img
+            class="avatar"
+            src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=160&h=160&fit=crop&crop=face&auto=format"
+            alt="Michael Chen"
+          />
+          <div class="card-name">Michael Chen</div>
+          <div class="card-role">Lead Designer</div>
+        </div>
+
+        <div class="card">
+          <img
+            class="avatar"
+            src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=160&h=160&fit=crop&crop=face&auto=format"
+            alt="Emily Davis"
+          />
+          <div class="card-name">Emily Davis</div>
+          <div class="card-role">Head of Product</div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-logo">Visionary</div>
+      <span class="footer-copy"
+        >© 2026 Visionary Inc. All rights reserved.</span
+      >
+      <ul class="footer-links">
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">LinkedIn</a></li>
+        <li><a href="#">GitHub</a></li>
+      </ul>
+    </footer>
+
+    <script>
+      const btn = document.getElementById("menuBtn");
+      const nav = document.getElementById("navLinks");
+      btn.addEventListener("click", () => nav.classList.toggle("open"));
+    </script>
+  </body>
+</html>

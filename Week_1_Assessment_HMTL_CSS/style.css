@@ -1,0 +1,281 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --navy: #1a1f36;
+  --blue-accent: #4a6cf7;
+  --text-dark: #1a1f36;
+  --text-muted: #6b7280;
+  --bg-light: #f0f4f8;
+  --white: #ffffff;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  color: var(--text-dark);
+  background: var(--white);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 60px;
+  background: var(--white);
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--navy);
+  letter-spacing: -0.5px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 36px;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: var(--navy);
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 4px;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--navy);
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+.hero {
+  text-align: center;
+  padding: 100px 20px 110px;
+  background: var(--white);
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: var(--navy);
+  letter-spacing: -1px;
+  line-height: 1.15;
+  white-space: nowrap;
+  margin: 0 auto 20px;
+}
+
+.hero p {
+  font-size: 1rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.team-section {
+  background: var(--bg-light);
+  padding: 80px 60px 90px;
+}
+
+.team-section h2 {
+  text-align: center;
+  font-size: clamp(1.6rem, 3.5vw, 2rem);
+  font-weight: 800;
+  color: var(--navy);
+  letter-spacing: -0.5px;
+  margin-bottom: 50px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 1060px;
+  margin: 0 auto;
+}
+
+.card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 36px 24px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  transition:
+    transform 0.22s,
+    box-shadow 0.22s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.card-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+
+.card-role {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--blue-accent);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.4;
+}
+
+footer {
+  background: var(--navy);
+  color: rgba(255, 255, 255, 0.7);
+  padding: 36px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footer-logo {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--white);
+  letter-spacing: -0.4px;
+}
+
+.footer-copy {
+  font-size: 0.85rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: var(--white);
+}
+
+@media (max-width: 900px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  nav {
+    padding: 18px 32px;
+  }
+  .team-section {
+    padding: 60px 32px 70px;
+  }
+  footer {
+    padding: 28px 32px;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .nav-links.open {
+    display: flex;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    background: var(--white);
+    padding: 20px 32px 24px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    z-index: 100;
+  }
+  .hamburger {
+    display: flex;
+  }
+  nav {
+    padding: 16px 24px;
+    position: relative;
+  }
+  .hero {
+    padding: 70px 24px 80px;
+  }
+  .hero h1 {
+    font-size: 1.8rem;
+    white-space: normal;
+  }
+  .hero p {
+    white-space: normal;
+    max-width: 320px;
+  }
+  .team-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .team-section {
+    padding: 50px 20px 60px;
+  }
+  .card {
+    padding: 24px 18px 22px;
+  }
+  .avatar {
+    width: 64px;
+    height: 64px;
+  }
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 28px 24px;
+  }
+}
+
+@media (max-width: 380px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+}
